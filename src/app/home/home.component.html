@@ -1,0 +1,30 @@
+<div style="width: 400px;margin: 2em">
+  <label for="comment"> Comment :
+    <textarea id="comment" class="form-control"> </textarea></label>
+  <div>
+    <button style="margin-top:1em " class=" btn btn-primary"> add comment</button>
+  </div>
+</div>
+
+<div style="width: 400px;margin: 3em" *ngIf="comments != null">
+  <div *ngFor="let c of comments; let i =index">
+    <p>    {{c.comment}} </p>
+    <div>
+      <app-star [rating]="c.numberOfReviews != 0 ? c.star/c.numberOfReviews : 0  "></app-star>
+    </div>
+    <div>
+      <span> {{c.like}}</span>
+      <i class="glyphicon glyphicon-heart" style="cursor: pointer"> </i>
+
+      <span> {{c.dislike}}</span>
+      <i class="glyphicon glyphicon-heart-empty " style="cursor: pointer"> </i>
+    </div>
+    <div>
+      <span> Rating :</span>
+      <label>
+        <input type="number" min="0 max=5" class="form-control" style="background-color: black; color: white;"/>
+      </label>
+    </div>
+    <hr/>
+  </div>
+</div>
