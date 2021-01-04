@@ -1,3 +1,11 @@
-<app-header>  </app-header>
-<app-home> </app-home>
+<app-header></app-header>
 
+<app-add-account></app-add-account>
+<hr>
+<router-outlet> </router-outlet>
+<base href="/">
+<ul>
+  <li *ngFor="let a of Accounts">
+    {{a.name}}
+  </li>
+</ul>
