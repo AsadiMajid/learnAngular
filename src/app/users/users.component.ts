@@ -17,10 +17,6 @@ export class UsersComponent implements OnInit {
 
   ngOnInit(): void {
 
-setTimeout(()=> {
-  debugger
-this.router.navigate(['/users']);
-},4000);
   }
 
 }

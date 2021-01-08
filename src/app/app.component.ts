@@ -15,10 +15,12 @@ export class AppComponent implements OnInit {
   constructor(private  accService: AccountsService, private  router: Router, private rout: ActivatedRoute) {
 
   }
-
   Accounts: IAccount[];
-
   ngOnInit() {
+    setTimeout(() => {
+      debugger
+      this.router.navigate(['/users']);
+    }, 4000);
     // setTimeout(() => {  this.router.navigate(['/users'],{relativeTo:this.rout});   }
     //   , 1000
     // );
