@@ -1,0 +1,7 @@
+<ul>
+  <li *ngFor="let u of users">
+  <a [routerLink]="['/accounts',u.id,'edit']" [queryParams]="{allowEdit:1 , key : true}"       > {{u.name}}</a>
+  </li>
+</ul>
+
+<button (click)="onClick(1)"    > clicked </button>
