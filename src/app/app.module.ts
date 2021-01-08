@@ -15,13 +15,8 @@ import {LoggingService} from "./loggin.service.service";
 import {UsersComponent} from './users/users.component';
 import {AccountsComponent} from './accounts/accounts.component';
 import { UserComponent } from './user/user.component';
-
-const r: Routes = [
-  {path: '', component: HomeComponent},
-  {path: 'users', component: UsersComponent},
-  {path: 'users/:id/:name', component: UserComponent},
-  {path: 'accounts', component: AccountsComponent},
-];
+import {EditAccountComponent} from "./edit-account/edit-account-component";
+import {EditUserComponent} from "./edit-user/edit-user.component";
 
 @NgModule({
   declarations: [
@@ -35,13 +30,15 @@ const r: Routes = [
     AddAccountComponent,
     UsersComponent,
     AccountsComponent,
-    UserComponent
+    UserComponent,
+    EditAccountComponent,
+    EditUserComponent
   ],
   imports: [
     NgbModule,
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(r),
+
   ],
   providers: [LoggingService],
   bootstrap: [AppComponent]

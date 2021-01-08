@@ -19,14 +19,10 @@ export class AppComponent implements OnInit {
   Accounts: IAccount[];
 
   ngOnInit() {
-    setTimeout(() => {
-        this.router.navigate(['/users'],{relativeTo:this.rout});
-
-      }
+    setTimeout(() => {  this.router.navigate(['/users'],{relativeTo:this.rout});   }
       , 1000
     );
     this.Accounts = this.accService.getAccounts();
-    console.log(this.accService.accounts);
   }
 
 
