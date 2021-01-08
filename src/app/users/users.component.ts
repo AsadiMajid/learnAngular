@@ -16,13 +16,11 @@ export class UsersComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    debugger
-    this.route.params.subscribe(
-      (p) => {
-        this.user = this.userService.getUser(+p['id']);
-      }
-    );
 
+setTimeout(()=> {
+  debugger
+this.router.navigate(['/users']);
+},4000);
   }
 
 }

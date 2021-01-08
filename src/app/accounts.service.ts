@@ -1,5 +1,5 @@
  import {IAccount} from "./iaccount";
- import {LoggingService} from "./loggin.service.service";
+ import {LoggingService} from "./loggin.service";
  import {Injectable} from "@angular/core";
 
  @Injectable()

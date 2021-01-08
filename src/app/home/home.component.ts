@@ -10,9 +10,7 @@ export class HomeComponent implements OnInit {
   comments: IComment[] = [];
   @ViewChild('commentText') txtComment: ElementRef;
 
-  constructor() {
-
-  }
+  constructor() { }
   ngOnInit(): void {
 
   }

@@ -1,31 +1,4 @@
 <div style="width: 400px;margin: 2em">
-  <label for="comment"> Comment :
-    <textarea #commentText  id="comment" class="form-control"> </textarea></label>
-  <div>
-    <button (click)="addComment()" style="margin-top:1em " class=" btn btn-primary"> add comment</button>
-  </div>
+
 </div>
 
-<div style="width: 400px;margin: 3em" *ngIf="comments != null">
-  <div *ngFor="let c of comments; let i =index">
-    <p style="clear: both">    {{c.comment}} </p>
-    <div style="float: left">
-      <app-star [rating]="c.numberOfReviews != 0 ? c.star/c.numberOfReviews : 0  "></app-star>
-    </div>
-    <div style="float: right">
-      <span> {{c.like}}</span>
-      <i (click)="commentLike(c)"  class="glyphicon glyphicon-heart" style="cursor: pointer"> </i>
-
-      <span> {{c.dislike}}</span>
-      <i (click)="commentDisLike(c)" class="glyphicon glyphicon-heart-empty" style="cursor: pointer"> </i>
-    </div>
-    <div style="clear: both">
-      <label>  <span>  Rating :</span>
-        <input type="number" #ratingText
-               (keyup.enter)="reviews(c,ratingText)" min="0 max=5" class="form-control"
-               style="background-color: black; color: white; width: 50px"/>
-      </label>
-    </div>
-    <hr/>
-  </div>
-</div>

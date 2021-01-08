@@ -6,7 +6,7 @@ import {ActivatedRoute, Router} from "@angular/router";
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+
   providers: [AccountsService]
 })
 
@@ -19,10 +19,10 @@ export class AppComponent implements OnInit {
   Accounts: IAccount[];
 
   ngOnInit() {
-    setTimeout(() => {  this.router.navigate(['/users'],{relativeTo:this.rout});   }
-      , 1000
-    );
-    this.Accounts = this.accService.getAccounts();
+    // setTimeout(() => {  this.router.navigate(['/users'],{relativeTo:this.rout});   }
+    //   , 1000
+    // );
+    // this.Accounts = this.accService.getAccounts();
   }
 
 
