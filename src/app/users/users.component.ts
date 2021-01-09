@@ -19,4 +19,8 @@ export class UsersComponent implements OnInit {
 
   }
 
+  cc() {
+      this.router.navigate(['/users']);
+  }
+
 }
