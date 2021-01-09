@@ -12,7 +12,7 @@ import {ActivatedRoute, Router} from "@angular/router";
 
 export class AppComponent implements OnInit {
 
-  constructor(private  accService: AccountsService, private  router: Router, private rout: ActivatedRoute) {
+  constructor(private  accService: AccountsService, private  router: Router, private routActive: ActivatedRoute) {
 
   }
 
@@ -20,7 +20,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     setTimeout(() => {
-      this.router.navigate(['/users']);
+      this.router.navigate(['/users',this.routActive]);
     }, 4000);
 
   }

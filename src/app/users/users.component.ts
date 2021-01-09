@@ -20,7 +20,7 @@ export class UsersComponent implements OnInit {
   }
 
   cc() {
-      this.router.navigate(['/users']);
+      this.router.navigate(['/users']).then(r => console.log(r));
   }
 
 }
